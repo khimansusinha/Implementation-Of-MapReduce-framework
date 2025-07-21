@@ -1,0 +1,72 @@
+
+NAME: Kumari Himansu Sinha
+
+B-Number: B01027707
+
+
+1. To build my project using "make":
+
+>>$ make clean
+>>$ make
+
+2. This "make" command generates three files run-mapreduce, mapreduce.o, usr_functions.o and main.o
+
+3. To run the program for "counter" functionality:
+
+>>$ ./run-mapreduce counter ./input-moon10.txt 4 
+
+4. To run the program for "finder" functionality:
+
+>>$ ./run-mapreduce finder ./input-moon10.txt 4 "Lord"
+
+5. I have implemented all the requirements as described inside the project.
+
+6. My project works for all the scenarios and test cases as descripbed inside the project description:
+   TEST CASES:
+   (a) ./run-mapreduce counter ./input-moon10.txt 4
+   (b) ./run-mapreduce counter ./input-alice30.txt 6 
+   (c) ./run-mapreduce counter ./input-warpeace.txt 5 
+   (d) ./run-mapreduce finder ./input-moon10.txt 4 "Lord"
+   (e) ./run-mapreduce finder ./input-alice30.txt 2 "Rabbit"
+   (f) ./run-mapreduce finder ./input-warpeace.txt 4 "Peace"
+
+7. Output of my program for the above mentioned test cases:
+
+>>$ ./run-mapreduce counter ./input-moon10.txt 4
+
+ksinha@remote02:~/system_programming/proj2_mapreduce/final_code$ ./run-mapreduce counter ./input-moon10.txt 4
+***** RESULT ***** 
+Result file: mr.rst
+Map worker pids: 777372 777373 777374 777375 
+Reduce worker pid: 777372
+Processing time (us): 138411
+
+>> To verify intermediate file and result file creation :: 
+   $ls -ltr | grep mr
+
+ksinha@remote02:~/system_programming/proj2_mapreduce/final_code$ ls -ltr | grep mr
+-rw-r----- 1 ksinha ksinha     178 Nov 24 11:56 mr-0.itm
+-rw-r----- 1 ksinha ksinha     178 Nov 24 11:56 mr-3.itm
+-rw-r----- 1 ksinha ksinha     178 Nov 24 11:56 mr-1.itm
+-rw-r----- 1 ksinha ksinha     178 Nov 24 11:56 mr-2.itm
+-rw-r----- 1 ksinha ksinha     194 Nov 24 11:56 mr.rst
+
+>>$ ./run-mapreduce finder ./input-moon10.txt 4 "Lord"
+
+ksinha@remote02:~/system_programming/proj2_mapreduce/final_code$ ./run-mapreduce finder ./input-moon10.txt 4 "Lord"
+***** RESULT ***** 
+Result file: mr.rst
+Map worker pids: 779086 779087 779088 779089 
+Reduce worker pid: 779086
+Processing time (us): 141818
+
+
+>> To verify intermediate file and result file creation :: 
+   $ls -ltr | grep mr
+
+ksinha@remote02:~/system_programming/proj2_mapreduce/final_code$ ls -ltr | grep mr
+-rw-r----- 1 ksinha ksinha       0 Nov 24 12:00 mr-0.itm
+-rw-r----- 1 ksinha ksinha      59 Nov 24 12:00 mr-3.itm
+-rw-r----- 1 ksinha ksinha     129 Nov 24 12:00 mr-1.itm
+-rw-r----- 1 ksinha ksinha      61 Nov 24 12:00 mr-2.itm
+-rw-r----- 1 ksinha ksinha     249 Nov 24 12:00 mr.rst
